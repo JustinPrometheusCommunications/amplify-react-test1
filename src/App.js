@@ -1,23 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import Test from "./components/Test";
+import Counter from "./components/counter";
+import { useDispatch, useSelector } from "react-redux";
+import UsersList from "./UsersList";
+import { deleteUser } from "./redux/slices/userDataSlice";
+import addUser from "./redux/slices/userDataSlice";
 
 function App() {
+  const usersData = useSelector((state) => {
+    return state.usersData;
+  });
+
+  const dispatch = useDispatch();
+
+  const handleDeleteUser = (id) => {
+    return () => {
+      dispatch(deleteUser(id));
+    };
+  };
+
+  const handleAddUser = () => {
+    return () => {
+      dispatch(addUser);
+    };
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <UsersList
+        usersData={usersData}
+        handleDeleteUser={handleDeleteUser}
+        handleAddUser={handleAddUser}
+      ></UsersList>
     </div>
   );
 }

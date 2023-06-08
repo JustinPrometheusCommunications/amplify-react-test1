@@ -3,9 +3,11 @@ import "./App.css";
 import Test from "./components/Test";
 import Counter from "./components/counter";
 import { useDispatch, useSelector } from "react-redux";
-import UsersList from "./UsersList";
 import { deleteUser } from "./redux/slices/userDataSlice";
 import addUser from "./redux/slices/userDataSlice";
+import UserList from "./UserList";
+import NavBar from "./navbar";
+
 // import "./collection.css";
 
 function App() {
@@ -26,31 +28,11 @@ function App() {
   //     dispatch(addUser);
   //   };
   // };
-  return (
-    // <div>
-    //   {/* <div>
-    //     <UsersList
-    //       usersData={usersData}
-    //       handleDeleteUser={handleDeleteUser}
-    //       handleAddUser={handleAddUser}
-    //     ></UsersList>
-    //   </div> */}
 
-    // </div>
+  return (
     <div>
-      <aside class="sidebar sidebar-boxed sidebar-dark">
-        <ul class="nav sidenav dropbable">
-          <li>
-            <a href>Send Message</a>
-          </li>
-          <li>
-            <a href>Conversation</a>
-          </li>
-          <li>
-            <a href>Message Template</a>
-          </li>
-        </ul>
-      </aside>
+      <NavBar />
+      <UserList />
     </div>
   );
 }

@@ -11128,3 +11128,6 @@ h1 small,
     word-break: break-all;
   }
 }
+.sidebar .nav-item .nav-link[data-toggle="collapse"].collapsed::after {
+  content: "\f105";
+}

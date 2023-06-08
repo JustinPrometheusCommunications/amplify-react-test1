@@ -7,6 +7,7 @@ import { deleteUser } from "./redux/slices/userDataSlice";
 import addUser from "./redux/slices/userDataSlice";
 import UserList from "./UserList";
 import NavBar from "./navbar";
+import SenderCard from "./sendercard";
 
 // import "./collection.css";
 
@@ -32,7 +33,7 @@ function App() {
   return (
     <div>
       <NavBar />
-      <UserList />
+      <SenderCard />
     </div>
   );
 }

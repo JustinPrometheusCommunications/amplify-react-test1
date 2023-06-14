@@ -11,7 +11,7 @@ function App() {
   return (
     <aside class="sidebar sidebar-boxed sidebar-dark">
       <ul class="nav sidenav dropbable">
-        <li>
+        <li class="nav-item active">
           <a href>
             Send Message
             <div id="navigation-arrow">
@@ -19,7 +19,7 @@ function App() {
             </div>
           </a>
         </li>
-        <li>
+        <li class="nav-item">
           <a href>
             Conversation
             <div id="navigation-arrow">
@@ -27,7 +27,7 @@ function App() {
             </div>
           </a>
         </li>
-        <li>
+        <li class="nav-item">
           <a href>
             Message Template
             <div id="navigation-arrow">

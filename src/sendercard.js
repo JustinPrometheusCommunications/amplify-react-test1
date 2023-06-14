@@ -84,6 +84,15 @@ function App() {
                   </p>
                 </div>
               </div>
+              <hr></hr>
+              <div class="row justify-content-lg-center" bis_skin_checked="1">
+                <button id="submit" type="submit" class="btn btn-primary">
+                  Send
+                </button>
+                <button id="reset" type="button" class="btn btn-secondary">
+                  Reset
+                </button>
+              </div>
             </form>
           </div>
         </section>
